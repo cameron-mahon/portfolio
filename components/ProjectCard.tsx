@@ -14,26 +14,26 @@ export default function ProjectCard({ title, description, url, status }: Project
     <div
       className="p-5 h-full flex flex-col justify-between min-h-[140px]"
       style={{
-        background: 'rgba(0, 0, 0, 0.7)',
+        background: 'var(--glass-bg)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid rgba(74, 222, 128, 0.4)',
-        boxShadow: '0 0 20px rgba(74, 222, 128, 0.08)',
+        border: '1px solid var(--glass-border)',
+        boxShadow: '0 0 20px var(--accent-muted)',
       }}
     >
       <div>
-        <h3 className="text-base font-medium mb-1" style={{ color: '#4ade80' }}>{title}</h3>
+        <h3 className="text-base font-medium mb-1" style={{ color: 'var(--accent)' }}>{title}</h3>
         {description && (
-          <p className="text-sm" style={{ color: 'rgba(74, 222, 128, 0.5)' }}>{description}</p>
+          <p className="text-sm" style={{ color: 'var(--accent)', opacity: 0.5 }}>{description}</p>
         )}
       </div>
 
       <div className="mt-3">
         {status === 'upcoming' && (
-          <span className="text-xs" style={{ color: 'rgba(74, 222, 128, 0.3)' }}>[ coming soon ]</span>
+          <span className="text-xs" style={{ color: 'var(--accent)', opacity: 0.3 }}>[ coming soon ]</span>
         )}
         {status === 'live' && (
-          <span className="text-xs" style={{ color: 'rgba(74, 222, 128, 0.6)' }}>→ enter</span>
+          <span className="text-xs" style={{ color: 'var(--accent)', opacity: 0.6 }}>→ enter</span>
         )}
       </div>
     </div>

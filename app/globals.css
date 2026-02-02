@@ -3,11 +3,60 @@
 :root {
   --background: #000000;
   --foreground: #e5e5e5;
-  --terminal-green: #4ade80;
-  --glass-bg: rgba(0, 0, 0, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-highlight: rgba(255, 255, 255, 0.05);
+  --accent: #4ade80;
+  --accent-muted: rgba(74, 222, 128, 0.3);
+  --accent-glow: rgba(74, 222, 128, 0.4);
+  --accent-subtle: rgba(74, 222, 128, 0.03);
+  --accent-subtle-2: rgba(74, 222, 128, 0.06);
+  --glass-bg: rgba(0, 0, 0, 0.7);
+  --glass-border: rgba(74, 222, 128, 0.5);
   --text-muted: #a3a3a3;
+  --terminal-bg: rgba(0, 0, 0, 0.7);
+  --terminal-text: #4ade80;
+}
+
+/* Light + Orange */
+[data-theme="light-orange"] {
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --accent: #ea580c;
+  --accent-muted: rgba(234, 88, 12, 0.2);
+  --accent-glow: rgba(234, 88, 12, 0.3);
+  --accent-subtle: rgba(234, 88, 12, 0.03);
+  --accent-subtle-2: rgba(234, 88, 12, 0.06);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(234, 88, 12, 0.3);
+  --text-muted: #525252;
+  --terminal-bg: #1a1a1a;
+  --terminal-text: #fb923c;
+}
+
+/* Light + Blue */
+[data-theme="light-blue"] {
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --accent: #2563eb;
+  --accent-muted: rgba(37, 99, 235, 0.2);
+  --accent-glow: rgba(37, 99, 235, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(37, 99, 235, 0.3);
+  --text-muted: #525252;
+  --terminal-bg: #0f172a;
+  --terminal-text: #60a5fa;
+}
+
+/* Light + Grey */
+[data-theme="light-grey"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #404040;
+  --accent-muted: rgba(64, 64, 64, 0.15);
+  --accent-glow: rgba(64, 64, 64, 0.2);
+  --glass-bg: rgba(250, 250, 250, 0.9);
+  --glass-border: rgba(64, 64, 64, 0.2);
+  --text-muted: #525252;
+  --terminal-bg: #171717;
+  --terminal-text: #a3a3a3;
 }
 
 @theme inline {
@@ -38,12 +87,12 @@ body {
 }
 
 .terminal-scroll::-webkit-scrollbar-thumb {
-  background: rgba(74, 222, 128, 0.3);
+  background: var(--accent-muted);
   border-radius: 3px;
 }
 
 .terminal-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(74, 222, 128, 0.5);
+  background: var(--accent);
 }
 
 /* Blinking cursor animation */
@@ -60,4 +109,10 @@ body {
 @keyframes typing {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: var(--terminal-text);
+  opacity: 0.4;
 }

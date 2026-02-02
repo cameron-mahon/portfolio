@@ -4,7 +4,7 @@ export default function AsciiHeader() {
   const ascii = `
   ___      __       ___ ___       __    _ __    ___     ___
  /'___\\  /'__\`\\   /' __\` __\`\\   /'__\`\\ /\\\`'__\\ / __\`\\ /' _ \`\\
-/\\ \\__/ /\\ \\L\\.\\_/\\ \\/\\ \\/\\ \\ /\\  __/ \\ \\ \\/ /\\ \\L\\ \\/\\ \\/\\ \\
+/\\ \\__/ /\\ \\L\\.\\_/\\ \\/\\ \\/ \\ \\ /\\  __/ \\ \\ \\/ /\\ \\L\\ \\/\\ \\/\\ \\
 \\ \\____\\\\ \\__/.\\_\\\\ \\_\\ \\_\\ \\_\\\\ \\____\\ \\ \\_\\ \\ \\____/\\ \\_\\ \\_\\
  \\/____/ \\/__/\\/_/ \\/_/\\/_/\\/_/ \\/____/  \\/_/  \\/___/  \\/_/\\/_/
                                    __
@@ -20,11 +20,11 @@ export default function AsciiHeader() {
     <div className="flex justify-start items-start w-full overflow-hidden">
       <pre
         style={{
-          color: '#4ade80',
+          color: 'var(--accent)',
           fontSize: 'clamp(6px, 0.9vw, 11px)',
           lineHeight: 1.1,
           fontFamily: 'var(--font-mono), monospace',
-          textShadow: '0 0 8px rgba(74, 222, 128, 0.4)',
+          textShadow: '0 0 8px var(--accent-glow)',
           whiteSpace: 'pre',
         }}
       >

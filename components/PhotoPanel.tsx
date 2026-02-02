@@ -5,13 +5,13 @@ import Image from 'next/image';
 export default function PhotoPanel() {
   return (
     <div
-      className="aspect-square h-[85%] overflow-hidden"
+      className="aspect-square h-full max-h-[400px] overflow-hidden"
       style={{
-        background: 'rgba(0, 0, 0, 0.7)',
+        background: 'var(--glass-bg)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid rgba(74, 222, 128, 0.5)',
-        boxShadow: '0 0 30px rgba(74, 222, 128, 0.1)',
+        border: '1px solid var(--glass-border)',
+        boxShadow: '0 0 30px var(--accent-muted)',
       }}
     >
       {/* Image - square */}
@@ -23,11 +23,11 @@ export default function PhotoPanel() {
           className="object-cover object-center"
           priority
         />
-        {/* Subtle green tint */}
+        {/* Subtle tint */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'linear-gradient(to bottom, rgba(74, 222, 128, 0.03) 0%, rgba(0,0,0,0.3) 100%)',
+            background: 'linear-gradient(to bottom, var(--accent-muted) 0%, rgba(0,0,0,0.3) 100%)',
           }}
         />
       </div>

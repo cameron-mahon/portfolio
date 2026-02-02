@@ -67,7 +67,7 @@ export default function ProjectCarousel() {
               width: index === activeIndex ? '12px' : '6px',
               height: '6px',
               borderRadius: '3px',
-              background: index === activeIndex ? 'rgba(74, 222, 128, 0.6)' : 'rgba(74, 222, 128, 0.2)',
+              background: index === activeIndex ? 'var(--accent)' : 'var(--accent-muted)',
               transition: 'all 0.2s',
             }}
             aria-label={`Go to project ${index + 1}`}
